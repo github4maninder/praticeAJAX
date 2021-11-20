@@ -11,6 +11,9 @@ btn.addEventListener('click', function() {
   };
   ourRequest.send();
   pageCounter++;
+  if (pageCounter > 3){
+    btn.classList.add('hide-me');
+  }
 });
 
 function renderHTML(data){
@@ -20,6 +23,6 @@ function renderHTML(data){
     htmlString += "<p>" + data[i].name + "is a " + data[i].species+".";
   }
   info.insertAdjacentHTML("beforeend", htmlString);
-}
+};
 
 
